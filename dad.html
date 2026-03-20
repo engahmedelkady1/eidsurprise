@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eid for Dad</title>
+<style>
+body {display:flex;justify-content:center;align-items:center;height:100vh;background:#0f172a;color:white;font-family:Arial;text-align:center}
+button{padding:12px 25px;margin:10px;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
+#yes{background:#22c55e;color:white}
+#no{background:#ef4444;color:white;position:relative}
+</style>
+</head>
+<body>
+
+<div>
+<h1>Dad, will you be my Eid hero? 🌙</h1>
+<button id="yes">Yes ✨</button>
+<button id="no">No</button>
+<h2 id="msg"></h2>
+</div>
+
+<script>
+const no = document.getElementById("no");
+const yes = document.getElementById("yes");
+const msg = document.getElementById("msg");
+
+no.onmouseover = () => {
+  no.style.position = "absolute";
+  no.style.left = Math.random()*window.innerWidth + "px";
+  no.style.top = Math.random()*window.innerHeight + "px";
+};
+
+yes.onclick = () => {
+  msg.innerText = "Eid Mubarak Dad ❤️ Thank you for everything you do for me";
+};
+</script>
+
+</body>
+</html>
